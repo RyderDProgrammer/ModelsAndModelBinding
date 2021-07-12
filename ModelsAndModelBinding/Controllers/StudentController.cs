@@ -19,11 +19,17 @@ namespace ModelsAndModelBinding.Controllers
         [HttpPost]
         public IActionResult Add(IFormCollection form)
         {
+            //Need serverside validation for all data
+
             Student stu = new Student();
             stu.FullName = form["full_name"];
             stu.DateOfBirth = Convert.ToDateTime(form["dob"]);
             stu.EmailAddress = form["email"];
             stu.PhoneNumber = form["home_phone"];
+
+            //Add to database
+
+            ViewData["Added"] = true;
 
             return View();
         }

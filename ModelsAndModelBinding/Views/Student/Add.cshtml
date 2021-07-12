@@ -3,21 +3,24 @@
     ViewData["Title"] = "Add new Student";
 }
 
-<h1>Add new Student</h1>
 
-<form method="post">
-    <label>Full Name</label>
-    <input type="text" name="full_name"/>
-    <br />
-    <label>Date of Birth</label>
-    <input type="text" name="dob"/>
-    <br />
-    <label>Email</label>
-    <input type="text" name="email"/>
-    <br />
-    <label>Home Phone</label>
-    <input type="text" name="home_phone"/>
-    <br />
+@if (ViewData["Added"] == null)
+{
+    <h1>Add new Student</h1>
+    <form method="post">
+        <label>Full Name</label>
+        <input type="text" name="full_name"/>
+        <br />
+        <label>Date of Birth</label>
+        <input type="text" name="dob"/>
+        <br />
+        <label>Email</label>
+        <input type="text" name="email"/>
+        <br />
+        <label>Home Phone</label>
+        <input type="text" name="home_phone"/>
+        <br />
 
-    <input type="submit" name="Add Student"/>
-</form>
+        <input type="submit" name="Add Student"/>
+    </form>
+}
