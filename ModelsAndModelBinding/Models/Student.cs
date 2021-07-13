@@ -17,6 +17,7 @@ namespace ModelsAndModelBinding.Models
         public int StudentID { get; set; }
         
         [Display(Name = "Full Name")]
+        [Required(ErrorMessage ="Give me a full name")]
         /// <summary>
         /// Uses the students legal first and last name.
         /// </summary>
@@ -31,12 +32,14 @@ namespace ModelsAndModelBinding.Models
 
         [Display(Name = "Email")]
         [DataType(DataType.EmailAddress)]
+        [EmailAddress]
         /// <summary>
         /// The students email (ends with @student.cptc.edu)
         /// </summary>
         public string EmailAddress { get; set; }
 
         [Display(Name = "Home Phone")]
+        [Required]
         /// <summary>
         /// The home phone number of the students
         /// </summary>
