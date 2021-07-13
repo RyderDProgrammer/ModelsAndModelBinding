@@ -23,12 +23,14 @@ namespace ModelsAndModelBinding.Models
         public string FullName { get; set; }
 
         [Display(Name = "DOB")]
+        [DataType(DataType.Date)]
         /// <summary>
         /// Only stores day and year not the time.
         /// </summary>
         public DateTime DateOfBirth { get; set; }
 
         [Display(Name = "Email")]
+        [DataType(DataType.EmailAddress)]
         /// <summary>
         /// The students email (ends with @student.cptc.edu)
         /// </summary>
