@@ -4,3 +4,24 @@
 }
 
 <h1>Add with ModelBinding</h1>
+
+<form method="post">
+    <label asp-for="FullName"></label>
+    <input class="form-control" asp-for="FullName" />
+    <span asp-validation-for="FullName"></span>
+    <br />
+    <label asp-for="DateOfBirth"></label>
+    <input asp-for="DateOfBirth" />
+    <span asp-validation-for="DateOfBirth"></span>
+    <br />
+    <label asp-for="EmailAddress"></label>
+    <input asp-for="EmailAddress" />
+    <span asp-validation-for="EmailAddress"></span>
+    <br />
+    <label asp-for="PhoneNumber"></label>
+    <input asp-for="PhoneNumber" />
+    <span asp-validation-for="PhoneNumber"></span>
+    <br />
+
+    <input type="submit" value="Add Student" />
+</form>
