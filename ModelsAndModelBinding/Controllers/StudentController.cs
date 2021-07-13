@@ -29,7 +29,7 @@ namespace ModelsAndModelBinding.Controllers
 
             //Add to database
 
-            ViewData["Added"] = true;
+            ViewData["Added"] = stu.FullName + " added successfully";
 
             return View();
         }
